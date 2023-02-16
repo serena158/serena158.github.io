@@ -532,16 +532,16 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Photoshoot_atlas_1.png?1676591026849", id:"Photoshoot_atlas_1"},
-		{src:"images/Photoshoot_atlas_2.png?1676591026849", id:"Photoshoot_atlas_2"},
-		{src:"images/Photoshoot_atlas_3.png?1676591026849", id:"Photoshoot_atlas_3"},
-		{src:"images/Photoshoot_atlas_4.png?1676591026849", id:"Photoshoot_atlas_4"},
-		{src:"images/Photoshoot_atlas_5.png?1676591026849", id:"Photoshoot_atlas_5"},
-		{src:"images/Photoshoot_atlas_6.png?1676591026849", id:"Photoshoot_atlas_6"},
-		{src:"images/Photoshoot_atlas_7.png?1676591026849", id:"Photoshoot_atlas_7"},
-		{src:"images/Photoshoot_atlas_8.png?1676591026849", id:"Photoshoot_atlas_8"},
-		{src:"images/Photoshoot_atlas_9.png?1676591026849", id:"Photoshoot_atlas_9"},
-		{src:"images/Photoshoot_atlas_10.png?1676591026849", id:"Photoshoot_atlas_10"}
+		{src:"Photoshoot_atlas_1.png?1676591026849", id:"Photoshoot_atlas_1"},
+		{src:"Photoshoot_atlas_2.png?1676591026849", id:"Photoshoot_atlas_2"},
+		{src:"Photoshoot_atlas_3.png?1676591026849", id:"Photoshoot_atlas_3"},
+		{src:"Photoshoot_atlas_4.png?1676591026849", id:"Photoshoot_atlas_4"},
+		{src:"Photoshoot_atlas_5.png?1676591026849", id:"Photoshoot_atlas_5"},
+		{src:"Photoshoot_atlas_6.png?1676591026849", id:"Photoshoot_atlas_6"},
+		{src:"Photoshoot_atlas_7.png?1676591026849", id:"Photoshoot_atlas_7"},
+		{src:"Photoshoot_atlas_8.png?1676591026849", id:"Photoshoot_atlas_8"},
+		{src:"Photoshoot_atlas_9.png?1676591026849", id:"Photoshoot_atlas_9"},
+		{src:"Photoshoot_atlas_10.png?1676591026849", id:"Photoshoot_atlas_10"}
 	],
 	preloads: []
 };
