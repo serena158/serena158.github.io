@@ -256,7 +256,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/WestLockers_atlas_1.png", id:"WestLockers_atlas_1"}
+		{src:"WestLockers_atlas_1.png", id:"WestLockers_atlas_1"}
 	],
 	preloads: []
 };
