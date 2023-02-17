@@ -394,7 +394,7 @@ if (reversed == null) { reversed = false; }
 		Makes the specified object visible or invisible.
 		*/
 		_this.Natural_1.visible = true;
-		_this.Reflector_1.visible = fa;se;
+		_this.Reflector_1.visible = false;
 		_this.l2new.visible = false;
 		_this.Direct_Light.visible = false;
 		_this.Gym_Light.visible = false;
