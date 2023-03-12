@@ -2,14 +2,35 @@
 <html>
 	
 <head>
-	
 	<style>
 		font-family: Times New Roman;
-		
+		.grid-container {
+  			display: grid;
+  			grid-template-columns: auto auto;
+  			gap: 10px;
+  			padding: 10px;
+}
+		.grid-container > div {}
 	</style>
 </head>
 	
 <body onload="init();">
-	<div style="background-color:black;"> <h1 align="center">Serena Liu's Website</h1> </div>
+	<hr>
+	<p>
+	<div> 
+		&nbsp;
+		<h1 align="center">Serena Liu's Website</h1> 
+		
+	</div>
+	<hr>
+	
+	<div class="grid-container">
+		<div></div>
+		<div style="text-align:left;">
+			<h2>Welcome to my website!</h2>
+			<p>I am a student and journalist from St. Louis, Missouri.</p>
+		</div>
+	</div>
+	
 </body>
 </html>
