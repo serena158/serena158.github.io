@@ -12,14 +12,20 @@
 }
 		.grid-container > div {}
 	</style>
+	<script>
+		var dt = new Date();
+		document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+	</script>
 </head>
 	
 <body onload="init();">
 	<hr>
+	<span style="font-size:10px;">Digital Portfolio</span> <span style="font-size:10px;text-align:right"><span id="datetime"></span></span> 
+	<hr>
 	<p>
 	<div> 
-		&nbsp;
-		<h1 align="center">Serena Liu's Website</h1> 
+		
+		<h1 align="center">Serena Liu's Portfolio</h1> 
 		
 	</div>
 	<hr>
@@ -27,9 +33,12 @@
 	<div class="grid-container">
 		<div></div>
 		<div style="text-align:left;">
-			<h2>Welcome to my website!</h2>
-			<p>I am a student and journalist from St. Louis, Missouri.</p>
+			<h2>Welcome to my digital newsroom!</h2>
+			<p>I am a student and journalist from St. Louis, Missouri. Keep scrolling to view some of my work.</p>
 		</div>
+	</div>
+	
+	<div>
 	</div>
 	
 </body>
