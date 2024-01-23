@@ -117,12 +117,29 @@
   from, to { border-color: transparent }
   50% { border-color: black }
 }
+/* Style for the navigation bar links */
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
+        /* Style for the active link (darkened) */
+        nav a.active {
+            background-color: #555;
+            color: white;
+        }
     </style>
 </head>
 
 <body onload="init();">
-
+    <nav>
+        <a href="#" class="active">Main Page</a>
+        <a href="about.html">About Me</a>
+    </nav>
     <header>
       <div class="text-half">
             <h1>Hi, I'm Serena</h1>
@@ -140,10 +157,10 @@
         
             <div class="gallery">
         <div class="gallery-item">
-            <a href="https://example.com" class="external-link" target="_blank">
+            <a href="https://www.nytimes.com/2022/06/17/learning/stolen-art-why-we-need-repatriation.html" class="external-link" target="_blank">
                 External Link
             </a>
-            <img src="serena158.github.io/assets/repatriation.png" alt="Repatriation">
+            <img src="/assets/repatriation.png" alt="Repatriation">
         </div>
         <div class="gallery-item">
             <a href="https://example.com" class="external-link" target="_blank">
