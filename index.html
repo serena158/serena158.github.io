@@ -63,6 +63,8 @@
             position: relative;
             overflow: hidden;
             margin: 10px;
+            width: calc(16.66% - 20px); /* Three items per row, considering margin */
+            box-sizing: border-box; /* Ensure the margin is included in the width calculation */
         }
 
         .gallery-item img {
