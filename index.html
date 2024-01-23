@@ -9,7 +9,6 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: RGB(237,231,225);
         }
 
         header {
@@ -17,8 +16,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px;
-            background-color: RGBA(255,255,255,0.5);
-            color: white;
+            color: black;
         }
 
         nav {
@@ -40,8 +38,8 @@
         }
         .text-half {
             width: 50%;
-            margin-top: 25vw;
-            margin-bottom:25vw;
+            margin-top: 10vw;
+            margin-bottom:10vw;
         }
 
         .animation-container {
@@ -49,6 +47,22 @@
             height: 100px; /* Set an appropriate height for your animation container */
             background-color: #f0f0f0; /* Set a background color for the animation container */
         }
+        .container{
+  display: inline-block;
+}
+.typed-out{
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  animation: 
+  typing 1s steps(20, end) forwards;
+  font-size: 1.6rem;
+  width: 0;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
     </style>
 </head>
@@ -58,6 +72,9 @@
     <header>
       <div class="text-half">
             <h1>Welcome to my digital newsroom...</h1>
+              <br>
+            <div class="container">
+              <div class="typed-out">I'm Serena Liu</div></div>
         </div>
         <div class="animation-container">
             <!-- Add your animation container content here -->
