@@ -52,16 +52,20 @@
 }
 .typed-out{
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid black;
   white-space: nowrap;
   animation: 
-  typing 1s steps(20, end) forwards;
+  typing 1s steps(20, end) forwards, blink-caret .5s step-end infinite;
   font-size: 1.6rem;
   width: 0;
 }
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
+}
+        @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
 }
 
     </style>
@@ -71,10 +75,10 @@
 
     <header>
       <div class="text-half">
-            <h1>Welcome to my digital newsroom...</h1>
+            <h1>Hi, I'm Serena</h1>
               <br>
             <div class="container">
-              <div class="typed-out">I'm Serena Liu</div></div>
+              <div class="typed-out">Welcome to my digital newsroom...</div></div>
         </div>
         <div class="animation-container">
             <!-- Add your animation container content here -->
