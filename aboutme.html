@@ -131,7 +131,7 @@
             const items = document.querySelectorAll(".slide-in");
 
             items.forEach(item => {
-                const slideInAt = window.scrollY + window.innerHeight - item.clientHeight / 2;
+                const slideInAt = window.scrollY + window.innerHeight;
                 const itemBottom = item.offsetTop + item.clientHeight;
 
                 const isHalfShown = slideInAt > item.offsetTop;
@@ -145,8 +145,6 @@
         }
 
         window.addEventListener("scroll", handleScroll);
-
-        // Trigger the handleScroll function on page load
         handleScroll();
     });
 </script>
