@@ -148,7 +148,7 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
- .slideshow-container {
+.slideshow-container {
             width: 100%;
             height: 100vh;
             overflow: hidden;
@@ -157,16 +157,15 @@
 
         .slide {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             background-size: cover;
             background-position: center;
-            opacity: 0;
             position: absolute;
-            transition: opacity 0.8s ease-in-out;
+            transition: transform 0.8s ease-in-out;
         }
 
         .activeB {
-            opacity: 1;
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -293,11 +292,11 @@
                     var slideOffset = slide.offsetTop;
                     var slideHeight = slide.offsetHeight;
 
-                    var opacity = 1 - Math.abs((scrollPosition - slideOffset) / windowHeight);
+                    var translateY = (scrollPosition - slideOffset) / 2;
 
-                    slide.style.opacity = opacity;
+                    slide.style.transform = 'translateY(' + translateY + 'px)';
 
-                    if (opacity > 0.5) {
+                    if (translateY < windowHeight / 2 && translateY > -windowHeight / 2) {
                         slide.classList.add('activeB');
                     } else {
                         slide.classList.remove('activeB');
