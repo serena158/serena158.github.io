@@ -148,23 +148,19 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
-        .slideshow-container {
-            height: 300vh; /* Adjust based on the number of slides */
-        }
+        .parallax {
+  /* The image used */
+  background-image: url("assets/news.png");
 
-        .slide {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 1s ease; /* Adjust the transition duration as needed */
-        }
+  /* Set a specific height */
+  min-height: 500px;
 
-        .slide img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-        }
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
     </style>
 </head>
 
@@ -265,16 +261,8 @@
     </section>
 
     <section id="news">
-       <div class="slideshow-container">
-        <div class="slide">
-            <img src="assets/EdWeek.png" alt="Image 1">
-        </div>
-        <div class="slide">
-            <img src="assets/mental.png" alt="Image 2">
-        </div>
-        <div class="slide">
-            <img src="assets/military.png" alt="Image 3">
-        </div>
+       <div class="parallax">
+       <img src="assets/repatriation.png">
     </div>
     </section>
 
@@ -282,26 +270,6 @@
         <div class="animation-container"></div>
         <div class="text-half"><h2>Arts and Entertainment</h2></div>
     </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
-
-            window.addEventListener("scroll", handleScroll);
-
-            function handleScroll() {
-                const slideHeight = slides[currentSlide].clientHeight;
-                const scrollPosition = window.scrollY;
-                const translateY = (scrollPosition / slideHeight) * 100;
-
-                slides.forEach((slide, index) => {
-                    if (index !== currentSlide) {
-                        slide.style.transform = `translateY(${translateY}%)`;
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
