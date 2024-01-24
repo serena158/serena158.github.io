@@ -82,6 +82,64 @@
             background-color: #555;
             color: white;
         }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            box-sizing: border-box;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            text-align: center;
+        }
+
+        .overlay-content a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .overlay-content a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -111,6 +169,33 @@
 
     <section id="opinions">
         <img style="width:50%;" src="assets/repatriation.png"></img>
+        <div class="text-half">
+                <div class="gallery">
+        <div class="gallery-item">
+            <img src="assets/repatriation.png" alt="Image 1">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h3>Stolen Art: Why We Need Repatriation</h3>
+                    <p>After visiting China with my family, I wrote an editorial about the importance of repatriation.</p>
+                    <a href="https://www.nytimes.com/2022/06/17/learning/stolen-art-why-we-need-repatriation.html" target="_blank">Link 1</a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="image2.jpg" alt="Image 2">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <h3>Title 2</h3>
+                    <p>Description 2</p>
+                    <a href="https://example.com" target="_blank">Link 2</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more gallery items as needed -->
+    </div>
+
+
+        </div>
     </section>
 
     <section id="news">
