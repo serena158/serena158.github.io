@@ -39,13 +39,6 @@
             position: relative; /* Added position relative for absolute positioning of the gap div */
         }
 
-        .gap-div {
-            background-color: #ccc; /* Adjust background color as needed */
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-
         .aboutme-container {
             width: 50%;
             height: 100px; /* Set an appropriate height for your animation container */
@@ -89,6 +82,23 @@
             margin-left: 50px auto;
             margin-right: 50px auto;
         }
+
+        .email-button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 20px;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .email-button:hover {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
     </style>
 </head>
 
@@ -112,7 +122,9 @@
                 <figcaption style="margin-right:20%;"><h3>In 2023, I represented Missouri at the Al Neuharth Free Spirit and Journalism Conference. I connected with press professionals and students from around the nation, renewing my commitment to pursuing press rights for journalists everywhere. This year, I am working with the Student Press Law Center to advocate for New Voices Legislation in Missouri.</h3></figcaption>
             </figure>
             </div>
-            <div class="gap-div"></div>
+            <div>
+                <div style="align:center;"><a href="mailto:your.email@example.com" class="email-button">Contact Me</a></div>
+            </div>
         </div>
         <div class="aboutme-container">
             <br>
@@ -174,19 +186,5 @@
             <img src="assets/bestofsno.jpg" style="width:80%;margin:10%;"></img>
         </div>
     </header>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Get the .text-half and .aboutme-container elements
-        const textHalf = document.querySelector('.text-half');
-        const aboutMeContainer = document.querySelector('.aboutme-container');
-
-        // Calculate the difference in height
-        const heightDifference = aboutMeContainer.offsetTop + aboutMeContainer.offsetHeight - textHalf.offsetTop - textHalf.offsetHeight;
-
-        // Set the height of the gap div
-        const gapDiv = document.querySelector('.gap-div');
-        gapDiv.style.height = heightDifference + 'px';
-    });
-</script>
 </body>
 </html>
