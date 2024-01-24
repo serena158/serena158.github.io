@@ -36,6 +36,14 @@
             width: 50%;
             margin-top: 10vw;
             margin-bottom: 10vw;
+            position: relative; /* Added position relative for absolute positioning of the gap div */
+        }
+
+        .gap-div {
+            background-color: #ccc; /* Adjust background color as needed */
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
 
         .aboutme-container {
@@ -88,6 +96,7 @@
     <div style="margin-top:20px;"></div>
     <header>
         <div class="text-half">
+            <div>
             <h1 style="margin-left:10%;">About Me</h1>
 
             <nav style="margin-left:10%;">
@@ -102,6 +111,8 @@
                 <img style="width:80%;" src="assets/freespirit.jpg"></img>
                 <figcaption style="margin-right:20%;"><h3>In 2023, I represented Missouri at the Al Neuharth Free Spirit and Journalism Conference. I connected with press professionals and students from around the nation, renewing my commitment to pursuing press rights for journalists everywhere. This year, I am working with the Student Press Law Center to advocate for New Voices Legislation in Missouri.</h3></figcaption>
             </figure>
+            </div>
+            <div class="gap-div"></div>
         </div>
         <div class="aboutme-container">
             <br>
@@ -163,5 +174,22 @@
             <img src="assets/bestofsno.jpg" style="width:80%;margin:10%;"></img>
         </div>
     </header>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the last div in the left and right parts
+            const leftDivs = document.querySelectorAll('.text-half:nth-child(1) div');
+            const rightDivs = document.querySelectorAll('.aboutme-container:nth-child(2) div');
+
+            const lastLeftDiv = leftDivs[leftDivs.length - 1];
+            const lastRightDiv = rightDivs[rightDivs.length - 1];
+
+            // Calculate the difference in height
+            const heightDifference = lastRightDiv.offsetHeight - lastLeftDiv.offsetHeight;
+
+            // Set the height of the gap div
+            const gapDiv = document.querySelector('.gap-div');
+            gapDiv.style.height = heightDifference + 'px';
+        });
+    </script>
 </body>
 </html>
