@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SERENA LIU // PORTFOLIO</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         body {
             font-family: Courier New, sans-serif;
@@ -148,19 +149,15 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
-    .parallax {
-  /* The image used */
-  background-image: url("assets/repatriation.png");
+  .swiper-container {
+      width: 80%;
+      height: 80%;
+    }
 
-  /* Set a specific height */
-  min-height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
     </style>
 </head>
 
@@ -261,9 +258,33 @@
     </section>
 
     <section id="news">
-        <div class="text-half"><h2>News and Features</h2></div>
-        <div class="text-half">
-            <div class="parallax"></div>
+        <div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background-image:url('image1.jpg')"></div>
+    <div class="swiper-slide" style="background-image:url('image2.jpg')"></div>
+    <div class="swiper-slide" style="background-image:url('image3.jpg')"></div>
+    <!-- Add more slides as needed -->
+  </div>
+
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
         </div>
             
 
