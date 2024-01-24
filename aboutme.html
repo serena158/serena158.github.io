@@ -56,6 +56,33 @@
             background-color: #555;
             color: white;
         }
+         .slide-in {
+            opacity: 0;
+            transform: translateX(100%);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        /* Add styles for the icon and text here */
+
+        /* Adjust as needed */
+        .item {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            /* Add additional styling for the icon */
+        }
+
+        /* Optional: Add styling for your container */
+        .list-container {
+            max-width: 600px;
+            margin: 50px auto;
+        }
     </style>
 </head>
 
@@ -82,6 +109,46 @@
            <div>
                 <h3 style="margin:20px;">Hi, I'm Serena Liu, Harvard '28. Currently, I'm a senior at Parkway West High, home of one of the Pathfinder, one of the best school newspapers in the nation — that is, in my biased opinion. You can also find my work in West Newsmagazine, Education Week and the New York Times.<br><br>For me, digital journalism is the intersection of writing, computer science and design. In an era of increasing misinformation, I'll use my technological experience to cut through the noise and reach my readers.</h3>
             </div>
+            <div class="list-container">
+    <div class="item slide-in">
+        <!-- Icon and text for the first item -->
+        <div class="icon">Icon 1</div>
+        <div>Item 1 Text</div>
+    </div>
+    
+    <div class="item slide-in">
+        <!-- Icon and text for the second item -->
+        <div class="icon">Icon 2</div>
+        <div>Item 2 Text</div>
+    </div>
+    
+    <!-- Add more items as needed -->
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener("scroll", function () {
+            const items = document.querySelectorAll(".slide-in");
+
+            items.forEach(item => {
+                const slideInAt = window.scrollY + window.innerHeight - item.clientHeight / 2;
+                const itemBottom = item.offsetTop + item.clientHeight;
+
+                const isHalfShown = slideInAt > item.offsetTop;
+                const isNotScrolledPast = window.scrollY < itemBottom;
+
+                if (isHalfShown && isNotScrolledPast) {
+                    item.classList.add("active");
+                } else {
+                    item.classList.remove("active");
+                }
+            });
+        });
+    });
+</script>
+
+
+            
             <img src="assets/bestofsno.jpg" style="width:80%;margin:10%;"></img>
         </div>
     </header>
