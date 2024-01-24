@@ -176,15 +176,12 @@
     </header>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
-        // Get the last div in the left and right parts
-        const leftDivs = document.querySelectorAll('.text-half > div');
-        const rightDivs = document.querySelectorAll('.aboutme-container .list-container');
-
-        const lastLeftDiv = leftDivs[leftDivs.length - 1];
-        const lastRightDiv = rightDivs[rightDivs.length - 1];
+        // Get the .text-half and .aboutme-container elements
+        const textHalf = document.querySelector('.text-half');
+        const aboutMeContainer = document.querySelector('.aboutme-container');
 
         // Calculate the difference in height
-        const heightDifference = lastRightDiv.getBoundingClientRect().bottom - lastLeftDiv.getBoundingClientRect().bottom;
+        const heightDifference = aboutMeContainer.getBoundingClientRect().bottom - textHalf.getBoundingClientRect().bottom;
 
         // Set the height of the gap div
         const gapDiv = document.querySelector('.gap-div');
