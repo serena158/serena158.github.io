@@ -57,9 +57,8 @@
             color: white;
         }
          .slide-in {
-            opacity: 0;
-            transform: translateX(100%);
-            transition: opacity 0.5s, transform 0.5s;
+            opacity: 100;
+            transition: opacity 0.5s, 
         }
 
         /* Add styles for the icon and text here */
@@ -111,13 +110,13 @@
             </div>
             <div class="list-container">
                 
-        <div class="item slide-in">
+        <div style="opacity:0;">
         <!-- Icon and text for the first item -->
         <div class="icon">Icon 1</div>
         <div><h3>boing</h3></div>
     </div>
     
-    <div class="item slide-in">
+    <div style="opacity:0;">
         <!-- Icon and text for the second item -->
         <div class="icon">Icon 2</div>
         <div><h3>boing</h3></div>
@@ -135,9 +134,8 @@
                 const itemBottom = item.offsetTop + item.clientHeight;
 
                 const isHalfShown = slideInAt > item.offsetTop;
-                const isNotScrolledPast = window.scrollY < itemBottom;
 
-                if (isHalfShown || isNotScrolledPast) {
+                if (isHalfShown) {
                     item.classList.add("slide-in");
                 } else {
                     item.classList.remove("slide-in");
