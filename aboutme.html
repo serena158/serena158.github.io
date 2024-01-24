@@ -11,7 +11,7 @@
             margin: 20px;
         }
 
-        header,section {
+        header, section {
             display: flex;
             justify-content: space-between;
             padding: 20px;
@@ -28,23 +28,22 @@
 
         h1 {
             padding-bottom: 5px;
-            size:100px;
+            size: 100px;
             font-family: Georgia;
         }
 
         .text-half {
             width: 50%;
             margin-top: 10vw;
-            margin-bottom:10vw;
+            margin-bottom: 10vw;
         }
 
         .aboutme-container {
             width: 50%;
             height: 100px; /* Set an appropriate height for your animation container */
         }
-        
 
-/* Style for the navigation bar links */
+        /* Style for the navigation bar links */
         nav a {
             color: #f2f2f2;
             padding: 14px 16px;
@@ -55,10 +54,6 @@
         nav a.active {
             background-color: #555;
             color: white;
-        }
-         .slide-in {
-            color:green;
-            transition: opacity 0.5s, 
         }
 
         /* Add styles for the icon and text here */
@@ -77,6 +72,11 @@
             /* Add additional styling for the icon */
         }
 
+        .slide-in {
+            color: green;
+            transition: opacity 0.5s;
+        }
+
         /* Optional: Add styling for your container */
         .list-container {
             max-width: 600px;
@@ -88,69 +88,65 @@
 <body>
     <div style="margin-top:20px;"></div>
     <header>
-      <div class="text-half">
+        <div class="text-half">
             <h1 style="margin-left:10%;">About Me</h1>
-    
-            
-          <nav style="margin-left:10%;">
-        <p>
-        <a href="index.html">Main Page</a>
-        <a href="#" class="active">About Me</a>
-        </p>
-        </nav>
-          <br>
-          <br>
-          <figure style="width:80%;margin-left:15%;margin-right:25%;">
-          <img style="width:80%;" src="assets/freespirit.jpg"></img><figcaption style="margin-right:20%;"><h3>In 2023, I represented Missouri at the Al Neuharth Free Spirit and Journalism Conference. I connected with press professionals and students from around the nation, renewing my commitment to pursuing press rights for journalists everywhere. This year, I am working with the Student Press Law Center to advocate for New Voices Legislation in Missouri.</h3></figcaption>
-          </figure>
-      </div>
+
+            <nav style="margin-left:10%;">
+                <p>
+                    <a href="index.html">Main Page</a>
+                    <a href="#" class="active">About Me</a>
+                </p>
+            </nav>
+            <br>
+            <br>
+            <figure style="width:80%;margin-left:15%;margin-right:25%;">
+                <img style="width:80%;" src="assets/freespirit.jpg"></img>
+                <figcaption style="margin-right:20%;"><h3>In 2023, I represented Missouri at the Al Neuharth Free Spirit and Journalism Conference. I connected with press professionals and students from around the nation, renewing my commitment to pursuing press rights for journalists everywhere. This year, I am working with the Student Press Law Center to advocate for New Voices Legislation in Missouri.</h3></figcaption>
+            </figure>
+        </div>
         <div class="aboutme-container">
-           <div>
+            <div>
                 <h3 style="margin:20px;">Hi, I'm Serena Liu, Harvard '28. Currently, I'm a senior at Parkway West High, home of one of the Pathfinder, one of the best school newspapers in the nation — that is, in my biased opinion. You can also find my work in West Newsmagazine, Education Week and the New York Times.<br><br>For me, digital journalism is the intersection of writing, computer science and design. In an era of increasing misinformation, I'll use my technological experience to cut through the noise and reach my readers.</h3>
             </div>
             <div class="list-container">
-                
-        <div>
-        <!-- Icon and text for the first item -->
-        <div class="icon">Icon 1</div>
-        <div><h3>boing</h3></div>
-    </div>
-    
-    <div>
-        <!-- Icon and text for the second item -->
-        <div class="icon">Icon 2</div>
-        <div><h3>boing</h3></div>
-    </div>
-    
-    <!-- Add more items as needed -->
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        function handleScroll() {
-            const items = document.querySelectorAll(".slide-in");
+                <div class="item">
+                    <!-- Icon and text for the first item -->
+                    <div class="icon">Icon 1</div>
+                    <div class="slide-in"><h3>boing</h3></div>
+                </div>
 
-            items.forEach(item => {
-                const slideInAt = window.scrollY + window.innerHeight;
-                const itemBottom = item.offsetTop + item.clientHeight;
+                <div class="item">
+                    <!-- Icon and text for the second item -->
+                    <div class="icon">Icon 2</div>
+                    <div class="slide-in"><h3>boing</h3></div>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    function handleScroll() {
+                        const items = document.querySelectorAll(".item");
 
-                const isHalfShown = slideInAt > item.offsetTop;
+                        items.forEach(item => {
+                            const slideInAt = window.scrollY + window.innerHeight;
+                            const itemBottom = item.offsetTop + item.clientHeight;
 
-                if (isHalfShown) {
-                    item.classList.add("slide-in");
-                } 
-            });
-        }
+                            const isHalfShown = slideInAt > item.offsetTop;
 
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-    });
-</script>
+                            if (isHalfShown) {
+                                item.classList.add("slide-in");
+                            } else {
+                                item.classList.remove("slide-in");
+                            }
+                        });
+                    }
 
-            
+                    window.addEventListener("scroll", handleScroll);
+                    handleScroll();
+                });
+            </script>
             <img src="assets/bestofsno.jpg" style="width:80%;margin:10%;"></img>
         </div>
     </header>
-
 </body>
-
 </html>
