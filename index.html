@@ -148,7 +148,23 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
+        .slideshow-container {
+            height: 300vh; /* Adjust based on the number of slides */
+        }
 
+        .slide {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 1s ease; /* Adjust the transition duration as needed */
+        }
+
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 
@@ -249,16 +265,43 @@
     </section>
 
     <section id="news">
-        <script id="asp-embed-script" data-zindex="1000000" type="module" type="text/javascript"  charset="utf-8" src="https://new.express.adobe.com/webpage/static/embed/embed.js"></script>
-            <a class="asp-embed-link" href="https://express.adobe.com/page/0K6tmCADBNuKN//" target="_blank">
-                <img src="https://express.adobe.com/page/0K6tmCADBNuKN//resources?asset_id=rendition&buster=1706130735179" alt="Bias in Photography - February 22, 2023 at 13.19.47" style="width:100%" border="0" /></a>
+       <div class="slideshow-container">
+        <div class="slide">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </div>
     </section>
 
     <section id="arts">
         <div class="animation-container"></div>
         <div class="text-half"><h2>Arts and Entertainment</h2></div>
     </section>
-   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+
+            window.addEventListener("scroll", handleScroll);
+
+            function handleScroll() {
+                const slideHeight = slides[currentSlide].clientHeight;
+                const scrollPosition = window.scrollY;
+                const translateY = (scrollPosition / slideHeight) * 100;
+
+                slides.forEach((slide, index) => {
+                    if (index !== currentSlide) {
+                        slide.style.transform = `translateY(${translateY}%)`;
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
