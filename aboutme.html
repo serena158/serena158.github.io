@@ -181,7 +181,7 @@
         const aboutMeContainer = document.querySelector('.aboutme-container');
 
         // Calculate the difference in height
-        const heightDifference = aboutMeContainer.getBoundingClientRect().bottom - textHalf.getBoundingClientRect().bottom;
+        const heightDifference = aboutMeContainer.offsetTop + aboutMeContainer.offsetHeight - textHalf.offsetTop - textHalf.offsetHeight;
 
         // Set the height of the gap div
         const gapDiv = document.querySelector('.gap-div');
