@@ -63,6 +63,9 @@
             display: flex;
             align-items: center;
             margin: 20px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: opacity 0.5s, transform 0.5s;
         }
 
         .icon {
@@ -72,12 +75,6 @@
             /* Add additional styling for the icon */
         }
 
-        .slide-in {
-            color: green;
-            transition: opacity 0.5s;
-        }
-
-        /* Optional: Add styling for your container */
         .list-container {
             max-width: 600px;
             margin: 50px auto;
@@ -112,13 +109,13 @@
                 <div class="item">
                     <!-- Icon and text for the first item -->
                     <div class="icon">Icon 1</div>
-                    <div class="slide-in"><h3>boing</h3></div>
+                    <div><h3>boing</h3></div>
                 </div>
 
                 <div class="item">
                     <!-- Icon and text for the second item -->
                     <div class="icon">Icon 2</div>
-                    <div class="slide-in"><h3>boing</h3></div>
+                    <div><h3>boing</h3></div>
                 </div>
                 <!-- Add more items as needed -->
             </div>
@@ -134,9 +131,8 @@
                             const isHalfShown = slideInAt > item.offsetTop;
 
                             if (isHalfShown) {
-                                item.classList.add("slide-in");
-                            } else {
-                                item.classList.remove("slide-in");
+                                item.style.opacity = "1";
+                                item.style.transform = "translateX(0)";
                             }
                         });
                     }
