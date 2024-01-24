@@ -124,7 +124,6 @@
     
     <!-- Add more items as needed -->
 </div>
-
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         function handleScroll() {
@@ -135,8 +134,9 @@
                 const itemBottom = item.offsetTop + item.clientHeight;
 
                 const isHalfShown = slideInAt > item.offsetTop;
-                
-                if (isHalfShown) {
+                const isNotScrolledPast = window.scrollY < itemBottom;
+
+                if (isHalfShown && isNotScrolledPast) {
                     item.classList.add("slide-in");
                 } else {
                     item.classList.remove("slide-in");
