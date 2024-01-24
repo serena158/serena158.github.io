@@ -148,7 +148,7 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
-           .parallax-container {
+          .parallax-container {
       position: relative;
       height: 100vh;
       overflow: hidden;
@@ -164,6 +164,7 @@
       background-position: center;
       transform: translateZ(0);
       will-change: transform;
+      transition: transform 0.5s ease-out;
     }
     </style>
 </head>
@@ -276,13 +277,11 @@
     const parallaxContainer = document.querySelector('.parallax-container');
     const parallaxImage = document.querySelector('.parallax-image');
 
-    parallaxContainer.addEventListener('mousemove', function(e) {
-      const { clientX, clientY } = e;
-      const { offsetWidth, offsetHeight } = parallaxContainer;
-      const x = clientX / offsetWidth - 0.5;
-      const y = clientY / offsetHeight - 0.5;
+    window.addEventListener('scroll', function() {
+      const scrollY = window.scrollY;
+      const translateY = scrollY * 0.5;
 
-      parallaxImage.style.transform = `translate(-${x * 50}px, -${y * 50}px)`;
+      parallaxImage.style.transform = `translateY(${translateY}px)`;
     });
   });
 </script>
