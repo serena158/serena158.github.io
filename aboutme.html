@@ -57,7 +57,7 @@
             color: white;
         }
          .slide-in {
-            opacity: 100;
+            opacity: 50;
             transition: opacity 0.5s, 
         }
 
@@ -110,13 +110,13 @@
             </div>
             <div class="list-container">
                 
-        <div style="opacity:0;">
+        <div>
         <!-- Icon and text for the first item -->
         <div class="icon">Icon 1</div>
         <div><h3>boing</h3></div>
     </div>
     
-    <div style="opacity:0;">
+    <div>
         <!-- Icon and text for the second item -->
         <div class="icon">Icon 2</div>
         <div><h3>boing</h3></div>
@@ -137,9 +137,7 @@
 
                 if (isHalfShown) {
                     item.classList.add("slide-in");
-                } else {
-                    item.classList.remove("slide-in");
-                }
+                } 
             });
         }
 
