@@ -50,55 +50,8 @@
         .container{
   display: inline-block;
 }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            width: 50%;
-        }
+    
 
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            margin: 10px;
-            width: calc(33.33% - 20px); /* Three items per row, considering margin */
-            box-sizing: border-box; /* Ensure the margin is included in the width calculation */
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .external-link {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            text-decoration: none;
-        }
-
-        .gallery-item:hover .external-link {
-            opacity: 1;
-        }
-
-        .external-link:hover {
-            text-decoration: underline;
-        }
 .typed-out{
   overflow: hidden;
   border-right: .15em solid black;
@@ -156,42 +109,7 @@
     </header>
 
     <section id="opinions">
-        <img src="assets/repatriation.png"></img>
-            <div class="gallery">
-        <div class="gallery-item">
-            <a href="https://www.nytimes.com/2022/06/17/learning/stolen-art-why-we-need-repatriation.html" class="external-link" target="_blank">
-                External Link
-            </a>
-            <img src="assets/repatriation.png" alt="Repatriation"><img>
-        </div>
-        <div class="gallery-item">
-            <a href="https://example.com" class="external-link" target="_blank">
-                External Link
-            </a>
-            <img src="image2.jpg" alt="Image 2">
-        </div>
-                <div class="gallery-item">
-            <a href="https://example.com" class="external-link" target="_blank">
-                External Link
-            </a>
-            <img src="image2.jpg" alt="Image 2">
-        </div>
-                <div class="gallery-item">
-            <a href="https://example.com" class="external-link" target="_blank">
-                External Link
-            </a>
-            <img src="image2.jpg" alt="Image 2">
-        </div>
-                <div class="gallery-item">
-            <a href="https://example.com" class="external-link" target="_blank">
-                External Link
-            </a>
-            <img src="image2.jpg" alt="Image 2">
-        </div>
-        <!-- Add more gallery items as needed -->
-    </div>
-        
-        <div class="text-half"><h2>Opinions</h2></div>
+        <img style="width:50%;" src="assets/repatriation.png"></img>
     </section>
 
     <section id="news">
