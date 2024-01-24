@@ -148,27 +148,7 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
-.slideshow-container {
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        scroll-snap-type: x mandatory;
-    }
 
-    .slide {
-        width: 100%;
-        flex: 0 0 100%;
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        scroll-snap-align: start;
-        transition: transform 0.8s ease-in-out;
-    }
-
-    .activeB {
-        transform: scale(1.2);
-    }
     </style>
 </head>
 
@@ -269,41 +249,16 @@
     </section>
 
     <section id="news">
-        <div class="slideshow-container" id="slideshow">
-            <div class="slide active" style="background-image:url('assets/repatriation.png')"></div>
-            <div class="slide" style="background-image:url('assets/mental.png')"></div>
-            <div class="slide" style="background-image:url('assets/photography.png')"></div>
-            <!-- Add more slides as needed -->
-        </div>
-
+        <script id="asp-embed-script" data-zindex="1000000" type="module" type="text/javascript"  charset="utf-8" src="https://new.express.adobe.com/webpage/static/embed/embed.js"></script>
+            <a class="asp-embed-link" href="https://express.adobe.com/page/0K6tmCADBNuKN//" target="_blank">
+                <img src="https://express.adobe.com/page/0K6tmCADBNuKN//resources?asset_id=rendition&buster=1706130735179" alt="Bias in Photography - February 22, 2023 at 13.19.47" style="width:100%" border="0" /></a>
     </section>
 
     <section id="arts">
         <div class="animation-container"></div>
         <div class="text-half"><h2>Arts and Entertainment</h2></div>
     </section>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var slides = document.querySelectorAll('.slide');
-        var currentSlide = 0;
-
-        function handleScroll() {
-            var scrollPosition = window.scrollX;
-
-            currentSlide = Math.round(scrollPosition / window.innerWidth);
-
-            slides.forEach(function (slide, index) {
-                if (index === currentSlide) {
-                    slide.classList.add('activeB');
-                } else {
-                    slide.classList.remove('activeB');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', handleScroll);
-    });
-</script>
+   
 </body>
 
 </html>
