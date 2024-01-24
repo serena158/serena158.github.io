@@ -2,6 +2,86 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERENA LIU // ABOUT ME</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header,section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            color: black;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            padding-bottom: 5px;
+            size:50px;
+            font-family: Georgia;
+        }
+
+        .text-half {
+            width: 50%;
+            margin-top: 10vw;
+            margin-bottom:10vw;
+        }
+
+        .aboutme-container {
+            width: 50%;
+            height: 100px; /* Set an appropriate height for your animation container */
+            background-color: #f0f0f0; /* Set a background color for the animation container */
+        }
+        
+
+/* Style for the navigation bar links */
+        nav a {
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Style for the active link (darkened) */
+        nav a.active {
+            background-color: #555;
+            color: white;
+        }
+    </style>
 </head>
-<body>
+
+<body onload="init();">
+    <div style="margin-top:20px;"></div>
+    <header>
+      <div class="text-half">
+            <h1 style="margin-left:10%;">About Me</h1>
+    
+            
+          <nav>
+        <p>
+        <a href="#" style="margin-left:10%">Main Page</a>
+        <a href="aboutme.html" style="margin-left:10%" class="active">About Me</a>
+        </p>
+        </nav>
+        </div>
+        <div class="aboutme-container">
+            <!-- Add your animation container content here -->
+            <!-- For example, you can add an embedded Adobe Animate animation or other animated content -->
+        </div>
+    </header>
+
 </body>
+
+</html>
