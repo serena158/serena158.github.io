@@ -65,7 +65,7 @@
             margin: 20px;
             opacity: 0;
             transform: translateX(100%);
-            transition: opacity 0.5s, transform 0.5s;
+            transition: opacity 1s, transform 1s;
         }
 
         .icon {
@@ -108,27 +108,27 @@
             <br>
             <div class="list-container">
                 <div class="item">
-                    <div class="icon"><img src="assets/2.png" style="width:50%"></div>
+                    <div class="icon"><img src="assets/2.png"></div>
                     <div><h3 style="margin-left:20px;">AP Style</h3></div>
                 </div>
                 <div class="item">
-                    <div class="icon"><img src="assets/3.png" style="width:50%"></div>
+                    <div class="icon"><img src="assets/3.png"></div>
                     <div><h3 style="margin-left:20px;">HTML/CSS</h3></div>
                 </div>
                 <div class="item">
-                    <div class="icon"><img src="assets/4.png" style="width:50%"></div>
+                    <div class="icon"><img src="assets/4.png"></div>
                     <div><h3 style="margin-left:20px;">Python</h3></div>
                 </div>
                 <div class="item">
-                    <div class="icon"><img src="assets/1.png" style="width:50%"></div>
+                    <div class="icon"><img src="assets/1.png"></div>
                     <div><h3 style="margin-left:20px;">Adobe Illustrator</h3></div>
                 </div>
                 <div class="item">
-                    <div class="icon"><img src="assets/5.png" style="width:50%"></div>
+                    <div class="icon"><img src="assets/5.png"></div>
                     <div><h3 style="margin-left:20px;">Adobe InDesign</h3></div>
                 </div>
                 <div class="item">
-                    <div class="icon"><img src="assets/6.png" style="width:50%"></div>
+                    <div class="icon"><img src="assets/6.png"></div>
                     <div><h3 style="margin-left:20px;">Adobe Animate</h3></div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
                             const slideInAt = window.scrollY + window.innerHeight;
                             const itemBottom = item.offsetTop + item.clientHeight;
 
-                            const isHalfShown = slideInAt > item.offsetTop;
+                            const isHalfShown = slideInAt > itemBottom;
 
                             if (isHalfShown) {
                                 item.style.opacity = "1";
