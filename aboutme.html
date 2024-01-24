@@ -86,7 +86,7 @@
     </style>
 </head>
 
-<body onload="init();">
+<body>
     <div style="margin-top:20px;"></div>
     <header>
       <div class="text-half">
@@ -138,15 +138,14 @@
                 const isNotScrolledPast = window.scrollY < itemBottom;
 
                 if (isHalfShown && isNotScrolledPast) {
-                    item.classList.add("active");
+                    item.classList.add("slide-in");
                 } else {
-                    item.classList.remove("active");
+                    item.classList.remove("slide-in");
                 }
             });
         });
     });
 </script>
-
 
             
             <img src="assets/bestofsno.jpg" style="width:80%;margin:10%;"></img>
