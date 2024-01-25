@@ -147,28 +147,47 @@
         .overlay-content h3 {
             margin: 5px; /* Adjusted margin for the title */
         }
-
-        .content {
-    /* Style for the content in the parallax section */
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
-    position: fixed; /* Change from relative to fixed */
-    width: 30%; /* Set an appropriate width */
-    z-index: 1; /* Add this line to place it above the images */
-}
-
-.image-scroll {
-    /* Style for the images that will scroll over the text */
+.Feature {
+  position: relative;
+	height: 100vh;
+  width: 100%;
+  overflow: hidden;
+	.image {
+		height: 100%;
+		width: 100%;
+		background: url(https://d2sb2la3kejgs3.cloudfront.net/Projects/YBCA-BAN8/Mobile/_800xAUTO_crop_center-center_none/BAN8_Home_Hero_M_Crop_1387x3000.jpg);
+		background-size: cover;	
+		background-position: 50% 50%;
+	}
+	.Feature-content {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    max-width: 800px; /* Adjust maximum width for your images */
-    position: absolute; /* Change from relative to absolute */
-    top: 50%; /* Adjust vertical position */
-    left: 50%; /* Adjust horizontal position */
-    transform: translate(-50%, -50%); /* Center the images */
-    z-index: 0; /* Add this line to place it behind the text */
+    height: 100%;
+    overflow: hidden;
+    clip: rect(0,auto,auto,0);
+    background-position: 50%;
+    background-size: cover;
+		.Feature-title {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			z-index: 3;
+			h2, h4 {
+				font-size: 30px;
+				color: white;
+				z-index: 3;
+			}
+			h4 {
+				top: calc(50% + 80px);
+				font-size: 15px; 
+			}
+		}
+	}
 }
+
     </style>
 </head>
 
@@ -269,17 +288,42 @@
     </section>
 
     <section id="news">
-        <div style="width:100%;">
-                    <div class="content" style="width:30%;">
-                       <div><h1 style="text-align:center;">News</h1><br>
-                        <h3 style="margin:10%;">From quick coverage to in-depth political stories, here are some of my favorite news pieces.</h3>
-                        <br>
-                        </div>
-        <div style="width:70%;text-align:center;">
-            <img class="image-scroll" src="assets/internettax.png" alt="Image 1">
-            <img class="image-scroll" src="assets/education.png" alt="Image 2">
-            <img class="image-scroll" src="assets/lines.jpg" alt="Image 3">     
-        </div>
+        <div class="Feature" style="width:100%";>
+	<div class="image"></div>
+	<div class="Feature-content">
+		<div class="Feature-title"> 
+			<h2>This is a title</h2>
+			<h4>at the top</h4>
+		</div>
+		</div>
+</div>
+<div class="Feature">
+	<div class="image"></div>
+	<div class="Feature-content">
+		<div class="Feature-title"> 
+			<h2>Second Up!</h2>
+			<h4>of the list</h4>
+		</div>
+		</div>
+</div>
+<div class="Feature">
+	<div class="image"></div>
+	<div class="Feature-content">
+		<div class="Feature-title"> 
+			<h2>Third Place</h2>
+			<h4>almost gone</h4>
+		</div>
+		</div>
+</div>
+<div class="Feature">
+	<div class="image"></div>
+	<div class="Feature-content">
+		<div class="Feature-title"> 
+			<h2>last box</h2>
+			<h4>at the end</h4>
+		</div>
+		</div>
+</div>
     </div>
         
     </section>
