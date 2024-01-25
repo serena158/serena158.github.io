@@ -150,19 +150,15 @@
 
         .mySlides {display: none}
         .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+          max-width: 1000px;
+          position: relative;
+        }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev{
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
+  left: 0;
+  border-radius: 3px 0 0 3px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -334,11 +330,11 @@
 
     <section id="news">
         <div style="width: 40%;"></div>
-        <div class="slideshow-container">
+        <div class="slideshow-container" style="width:60%;margin:20;">
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="img_nature_wide.jpg" style="width:100%">
+  <img src="assets/repatriation.png" style="width:100%">
   <div class="text">Caption Text</div>
 </div>
 
@@ -393,6 +389,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+    
 </script>
     </section>
 
