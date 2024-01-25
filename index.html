@@ -148,15 +148,6 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
-        .myslides {
-            width: 100%;
-            /* Set a specific height */
-            height: 70vh; /* Adjust the height as needed */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
     </style>
 
     <script>
@@ -292,15 +283,18 @@
     <section id="news">
         <div style="width: 40%;"></div>
         <div id="slideshow-container" style="width:60%; margin:20px;">
-            <div class="mySlides" style="background-image: url('assets/internettax.png');">
+            <div class="mySlides">
+                <img src="assets/internettax.png" alt="Internet Tax">
             </div>
-            <div class="mySlides" style="background-image: url('assets/education.png');">
+            <div class="mySlides">
+                <img src="assets/education.png" alt="Education">
             </div>
-            <div class="mySlides" style="background-image: url('assets/lines.jpg');">
+            <div class="mySlides">
+                <img src="assets/lines.jpg" alt="Lines">
             </div>
             <div style="text-align:center;">
-            <button onclick="prevSlide()">Previous</button>
-            <button onclick="nextSlide()">Next</button>
+                <button onclick="prevSlide()">Previous</button>
+                <button onclick="nextSlide()">Next</button>
             </div>
         </div>
     </section>
