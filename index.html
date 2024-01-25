@@ -136,7 +136,14 @@
             margin: 5px; /* Adjusted margin for the title */
 	}
 	    
-
+.moving-text {
+      position: fixed;
+      white-space: nowrap;
+      top: 50%;
+      left: 100%;
+      transform: translate(-100%, -50%);
+      transition: left 0.5s ease;
+    }
 	
     </style>
 </head>
@@ -234,7 +241,29 @@
             <h3 style="margin:10%;margin-left:20%;">I've always loved writing stories, but it was only after joining my school newspaper that I realized I loved <b>sharing</b> them too. In journalism, everyone has a voice. I plan to use mine to spark important conversations about issues, both local and global.</h3>
         </div>
     </section>
+<br>
+	<div class="moving-text">Your Repeating Text Here</div>
 
+  <script>
+    // Optional: You can dynamically set the text content using JavaScript
+    document.querySelector('.moving-text').textContent = 'Your Repeating Text Here';
+
+    // Update text position based on scroll
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY;
+      const text = document.querySelector('.moving-text');
+      const screenWidth = window.innerWidth;
+
+      // Reset position when it reaches the leftmost edge
+      if (text.offsetLeft < -text.clientWidth) {
+        text.style.left = screenWidth + 'px';
+      }
+
+      // Move the text to the left
+      text.style.left = screenWidth - scrollPosition + 'px';
+    });
+  </script>
+	<br>
 	
 <section id="news" style="height:176.66vmin; display: flex; position: relative;align-items: start;">
         <div style="width:50%; position: sticky; top: 50%; transform: translateY(-50%);margin-left:10%;margin-top:10%;">
