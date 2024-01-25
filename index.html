@@ -261,27 +261,26 @@
     </div>
     <div style="width:50%; position: absolute; top: 0; right: 0;">
 	    <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    function handleScroll() {
-                        const items = document.querySelectorAll(".item");
+    document.addEventListener("DOMContentLoaded", function () {
+        function handleScroll() {
+            const items = document.querySelectorAll(".item");
 
-                        items.forEach(item => {
-                            const slideInAt = window.scrollY + window.innerHeight;
-                            const itemBottom = item.offsetTop + item.clientHeight;
+            items.forEach(item => {
+                const slideInAt = window.scrollY + window.innerHeight;
+                const itemBottom = item.offsetTop + item.clientHeight;
 
-                            const isHalfShown = slideInAt > (itemBottom);
+                const isHalfShown = slideInAt > (itemBottom);
 
-                            if (isHalfShown) {
-                                item.style.opacity = "1";
-                                item.style.transform = "translateX(0)";
-                            }
-                        });
-                    }
+                if (isHalfShown) {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateX(0)";
+                }
+            });
+        }
 
-                    window.addEventListener("scroll", handleScroll);
-                    handleScroll();
-                });
-            </script>
+        window.addEventListener("scroll", handleScroll);
+    });
+</script>
         <img src="assets/internettax.png" style="height:32.33vh; margin:auto; margin-left:0; margin-bottom: 1vh;object-fit: contain;" class="item" >
         <img src="assets/education.png" style="height:32.33vh; margin:auto; margin-left:50%; margin-bottom: 1vh; object-fit: contain;" class="item" >
         <img src="assets/lines.png" style="height:32.33vh; margin:auto; margin-left:10%; margin-bottom: 1vh; object-fit: contain;" class="item" >
