@@ -144,6 +144,14 @@
       transform: translate(-100%, -50%);
       transition: left 0.5s ease;
     }
+	    .moving-text2 {
+      position: absolute;
+      white-space: nowrap;
+      top: 50%;
+      left: 100%;
+      transform: translate(-100%, -50%);
+      transition: left 0.5s ease;
+    }
 	
     </style>
 </head>
@@ -246,7 +254,7 @@
 	<hr style="width:100%; height:1px; background: #fff;">
 	<br>
 	<br>
-	<div class="moving-text"><h3>BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022;</h3></div>
+	<div class="moving-text"><h3></h3></div>
 	<br>
 	<br>
 	<hr style="width:100%; height:1px; background: #fff;">
@@ -255,7 +263,7 @@
 <br>
   <script>
     // Optional: You can dynamically set the text content using JavaScript
-    document.querySelector('.moving-text').textContent = 'Your Repeating Text Here';
+    document.querySelector('.moving-text').textContent = 'BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022;';
 
     // Update text position based on scroll
     window.addEventListener('scroll', function() {
@@ -355,14 +363,32 @@
 	<hr style="width:100%; height:1px; background: #fff;">
 	<br>
 	<br>
-	<div class="moving-text"><h3>BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022;</h3></div>
+	<div class="moving-text2"></div>
 	<br>
 	<br>
 	<hr style="width:100%; height:1px; background: #fff;">
 	</div>
 <br>
 <br>
-    
+    <script>
+    // Optional: You can dynamically set the text content using JavaScript
+    document.querySelector('.moving-text2').textContent = 'BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022;';
+
+    // Update text position based on scroll
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY;
+      const text = document.querySelector('.moving-text');
+      const screenWidth = window.innerWidth;
+
+      // Reset position when it reaches the leftmost edge
+      if (text.offsetLeft < -text.clientWidth) {
+        text.style.left = screenWidth + 'px';
+      }
+
+      // Move the text to the left
+      text.style.left = screenWidth - scrollPosition + 'px';
+    });
+  </script>
 
     <section id="other" style="align-items: center;">
 
