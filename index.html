@@ -136,22 +136,7 @@
             margin: 5px; /* Adjusted margin for the title */
 	}
 	    
-.moving-text {
-      position: absolute;
-      white-space: nowrap;
-      top: 50%;
-      left: 100%;
-      transform: translate(-100%, -50%);
-      transition: left 0.5s ease;
-    }
-	    .moving-text2 {
-      position: absolute;
-      white-space: nowrap;
-      top: 50%;
-      left: 100%;
-      transform: translate(-100%, -50%);
-      transition: left 0.5s ease;
-    }
+
 	
     </style>
 </head>
@@ -249,31 +234,6 @@
             <h3 style="margin:10%;margin-left:20%;">I've always loved writing stories, but it was only after joining my school newspaper that I realized I loved <b>sharing</b> them too. In journalism, everyone has a voice. I plan to use mine to spark important conversations about issues, both local and global.</h3>
         </div>
     </section>
-<br>
-	<div style="position:relative;">
-	<hr style="width:100%; height:1px; background: #fff;">
-	<br>
-	<br>
-	<div class="moving-text"><h3></h3></div>
-	<br>
-	<br>
-	<hr style="width:100%; height:1px; background: #fff;">
-	</div>
-<br>
-<br>
-  <script>
-    // Optional: You can dynamically set the text content using JavaScript
-    document.querySelector('.moving-text').textContent = 'BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022;';
-
-    // Update text position based on scroll
-    window.addEventListener('scroll', function() {
-      const scrollPosition = window.scrollY;
-      const text = document.querySelector('.moving-text');
-
-      // Move the text vertically based on scroll
-      text.style.top = scrollPosition + 'px';
-  </script>
-	<br>
 	
 <section id="news" style="height:176.66vmin; display: flex; position: relative;align-items: start;">
         <div style="width:50%; position: sticky; top: 50%; transform: translateY(-50%);margin-left:10%;margin-top:10%;">
@@ -350,30 +310,7 @@
 		
         </div>
     </section>
-
-<br>
-	<div style="position:relative;">
-	<hr style="width:100%; height:1px; background: #fff;">
-	<br>
-	<br>
-	<div class="moving-text2"></div>
-	<br>
-	<br>
-	<hr style="width:100%; height:1px; background: #fff;">
-	</div>
-<br>
-<br>
-    <script>
-    document.querySelector('.moving-text2').textContent = 'BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022; BREAKING NEWS &#x2022;';
-
-    // Update text position based on scroll
-    window.addEventListener('scroll', function() {
-      const scrollPosition = window.scrollY;
-      const text = document.querySelector('.moving-text2');
-
-      // Move the text vertically based on scroll
-      text.style.top = scrollPosition + 'px';
-  </script>
+    
 
     <section id="other" style="align-items: center;">
 
