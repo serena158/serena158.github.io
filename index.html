@@ -150,6 +150,14 @@
 
         .myslides {
             width:100%;
+            /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
         }
     </style>
 
@@ -286,91 +294,20 @@
     <section id="news">
         <div style="width: 40%;"></div>
         <div id="slideshow-container" style="width:60%; margin:20px;">
-            <div class="mySlides">
-                <img src="assets/repatriation.png" style="width:100%">
+            <div class="mySlides" style="background-image: url('assets/internettax.png');">
             </div>
-            <div class="mySlides">
-                <img src="assets/mental.png" style="width:100%">
+            <div class="mySlides" style="background-image: url('assets/education.png');">>
             </div>
-            <div class="mySlides">
-                <img src="assets/military.png" style="width:100%">
+            <div class="mySlides" style="background-image: url('assets/lines.jpg');">>
             </div>
+            <div style="text-align:center;">
             <button onclick="prevSlide()">Previous</button>
             <button onclick="nextSlide()">Next</button>
+            </div>
         </div>
     </section>
 
     <section id="arts">
-         <div style="width:60%;">
-                <div class="gallery">
-        <div class="gallery-item">
-            <a href="https://www.nytimes.com/2022/06/17/learning/stolen-art-why-we-need-repatriation.html" target="_blank">
-            <img src="assets/repatriation.png" alt="Repatriation">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>Stolen Art: Why We Need Repatriation</h3>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="https://www.edweek.org/policy-politics/opinion-a-student-journalists-plea-stop-censoring-us-and-our-advisers/2023/03" target="_blank">
-            <img src="assets/EdWeek.png" alt="EdWeek">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>A Student Journalist’s Plea: Stop Censoring Us (and Our Advisers)</h3>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="https://bestofsno.com/60735/opinions/photography-through-a-racial-lens/" target="_blank">
-            <img src="assets/photography.png" alt="Photography">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>Photography through a racial lens</h3>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="https://pwestpathfinder.com/2023/11/10/silent-pandemic/" target="_blank">
-            <img src="assets/mental.png" alt="Mental">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>Silent pandemic: Mental health stigma in the Asian American community</h3>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="https://pwestpathfinder.com/2022/04/29/the-pros-and-cons-of-military-recruitment-in-high-schools/" target="_blank">
-            <img src="assets/military.png" alt="Military">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>The pros and cons of military recruitment in high schools</h3>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="https://pwestpathfinder.com/2022/11/02/is-art-worth-more-than-life/" target="_blank">
-            <img src="assets/vangogh.png" alt="Van Gogh">
-            <div class="overlay">
-                <div class="overlay-content">
-                    <h3>Is art worth more than life?</h3>
-                </div>
-            </div>
-            </a>
-        </div>
-    </div>
-
-
-        </div>
-        <div style="width:40%;"><h1 style="text-align:center;">A&E + Features</h1><br>
-            <h3 style="margin:10%;text-align:center;">I've always loved writing stories, but it was only after joining my school newspaper that I realized I loved <b>sharing</b> them too. In journalism, everyone has a voice. I plan to use mine to spark important conversations about issues, both local and global.</h3>
-        </div>
-    </section>
 </body>
 
 </html>
