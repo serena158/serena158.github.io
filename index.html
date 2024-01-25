@@ -161,27 +161,60 @@
 }
 
 
-        #b {
-    width: 400px;
-    border: 1px solid #111;
-    padding: 0px;
-    margin: 0px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+  $finalHeight: 250px;
+$finalWidth: 3 * $finalHeight;
+$scrollBarHeight: 1px;
+
+::-webkit-scrollbar {
+  width: $scrollBarHeight;
+  height: $scrollBarHeight;
 }
-.img_holder {
-    padding: 0px;
-    margin: 0px;
-    height: 100px;
-    width: 910px;
+
+::-webkit-scrollbar-button {
+  width: $scrollBarHeight;
+  height: $scrollBarHeight;
 }
-#b img {
-    height: 90px;
-    width: 100px;
+
+body {
+  background: #111;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.horizontal-scroll-wrapper {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: calc(#{$finalHeight} + #{$scrollBarHeight});
+  max-height: $finalWidth;
+  margin: 0;
+  padding-top: $scrollBarHeight;
+  background: #abc;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg) translateY(-$finalHeight);
+  transform-origin: right top;
+  & > div {
+    display: block;
     padding: 5px;
-    background: #123;
-    display: inline-block;
+    background: #cab;
+    transform: rotate(90deg);
+    transform-origin: right top;
+  }
 }
+
+.squares {
+  padding: $finalHeight 0 0 0;
+  & > div {
+    width: $finalHeight;
+    height: $finalHeight;
+    margin: 10px 0;
+  }
+}
+
     </style>
 </head>
 
@@ -281,47 +314,18 @@
         </div>
     </section>
 
-    <section id="b">
-        <div class="img_holder">
-            <img/>
-            <img/>
-            <img/>
-            <img/>
-            <img/>
-            <img/>
-            <img/>
-            <img/>
-        </div>
-    </div>
+    <section id="news">
+       <div class="horizontal-scroll-wrapper squares">
+  <div>item 1</div>
+  <div>item 2</div>
+  <div>item 3</div>
+  <div>item 4</div>
+  <div>item 5</div>
+  <div>item 6</div>
+  <div>item 7</div>
+  <div>item 8</div>
 </div>
-        <script>
-            var scroller = {};
-            scroller.e = document.getElementById("b");
-
-            if (scroller.e.addEventListener) {
-                scroller.e.addEventListener("mousewheel", MouseWheelHandler, false);
-                scroller.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
-            } else scroller.e.attachEvent("onmousewheel", MouseWheelHandler);
-            
-            function MouseWheelHandler(e) {
-            
-                // cross-browser wheel delta
-                var e = window.event || e;
-                var delta = - 20 * (Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))));
-            
-                var pst = $('#b').scrollLeft() + delta;
-            
-                if (pst < 0) {
-                    pst = 0;
-                } else if (pst > $('.img_holder').width()) {
-                    pst = $('.img_holder').width();
-                }
-            
-                $('#b').scrollLeft(pst);
-            
-                return false;
-            }
-        </script>
+</div>
     </section>
 
     <section id="arts">
