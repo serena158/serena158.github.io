@@ -149,32 +149,37 @@
         }
 
         .parallax {
-            /* Set the background color and adjust properties */
-            background-color: black; /* Set your desired background color */
-            height: 100vh; /* Set the height of the parallax section */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff; /* Text color on top of the background */
-            font-size: 2em; /* Adjust text size */
-        }
+    /* Set the background color and adjust properties */
+    background-color: black; /* Set your desired background color */
+    height: 100vh; /* Set the height of the parallax section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Text color on top of the background */
+    font-size: 2em; /* Adjust text size */
+    position: relative; /* Add this line to make it relative */
+}
 
-        .content {
-            /* Style for the content in the parallax section */
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
-        }
+.content {
+    /* Style for the content in the parallax section */
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
+    position: relative; /* Add this line to make it relative */
+    z-index: 1; /* Add this line to place it above the images */
+}
 
-        .image-scroll {
-            /* Style for the images that will scroll over the text */
-            width: 100%;
-            height: auto;
-            max-width: 800px; /* Adjust maximum width for your images */
-            position: absolute;
-            top: 50%; /* Adjust vertical position */
-            transform: translateY(-50%);
-        }
+.image-scroll {
+    /* Style for the images that will scroll over the text */
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* Adjust maximum width for your images */
+    position: absolute;
+    top: 50%; /* Adjust vertical position */
+    left: 50%; /* Adjust horizontal position */
+    transform: translate(-50%, -50%); /* Center the images */
+    z-index: 0; /* Add this line to place it behind the text */
+}
 
     </style>
 
