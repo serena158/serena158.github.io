@@ -50,7 +50,14 @@
         .container{
   display: inline-block;
 }
-    
+    .item {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: opacity 1s, transform 1s;
+        }
 
 .typed-out{
   overflow: hidden;
@@ -255,19 +262,43 @@
         <h3 style="width:60%;">From quick coverage to in-depth news, I strive for timely, accurate stories that help inform my readers.</h3>
     </div>
     <div style="width:50%; position: absolute; top: 0; right: 0;">
-        <img src="assets/internettax.png" style="width:50%; margin:auto; margin-left:0; object-fit: contain;">
+        <img class="item" src="assets/internettax.png" style="width:50%; margin:auto; margin-left:0; object-fit: contain;">
         <br>
         <br>
         <br>
-        <img src="assets/education.png" style="width:50%; margin:auto; margin-left:50%; object-fit: contain;">
+        <img class="item" src="assets/education.png" style="width:50%; margin:auto; margin-left:50%; object-fit: contain;">
         <br>
         <br>
         <br>
-        <img src="assets/lines.png" style="width:50%; margin:auto; margin-left:20%; object-fit: contain;">
+        <img class="item" src="assets/lines.png" style="width:50%; margin:auto; margin-left:20%; object-fit: contain;">
     </div>
 </section>
 	
-    <section id="arts" style="align-items: center;"></section>
+    <section id="arts" style="align-items: center;">
+	    <h1>Arts and Entertainment</h1>
+    </section>
+	<script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    function handleScroll() {
+                        const items = document.querySelectorAll(".item");
+
+                        items.forEach(item => {
+                            const slideInAt = window.scrollY + window.innerHeight;
+                            const itemBottom = item.offsetTop + item.clientHeight;
+
+                            const isHalfShown = slideInAt > itemBottom;
+
+                            if (isHalfShown) {
+                                item.style.opacity = "1";
+                                item.style.transform = "translateX(0)";
+                            }
+                        });
+                    }
+
+                    window.addEventListener("scroll", handleScroll);
+                    handleScroll();
+                });
+            </script>
 </body>
 
 </html>
