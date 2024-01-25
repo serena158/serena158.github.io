@@ -148,6 +148,16 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
+        .mySlides {
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .mySlides.active {
+            opacity: 1;
+        }
+
     </style>
 
     <script>
@@ -156,9 +166,9 @@
         function showSlides() {
             let slides = document.getElementsByClassName("mySlides");
             for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                slides[i].classList.remove("active");
             }
-            slides[slideIndex].style.display = "block";
+            slides[slideIndex].classList.add("active");
         }
 
         function nextSlide() {
@@ -282,19 +292,20 @@
 
     <section id="news">
         <div style="width: 40%;"></div>
-        <div id="slideshow-container" style="width:60%; margin:20px;">
+        <div id="slideshow-container" style="width:60%; margin:0;">
             <div class="mySlides">
-                <img src="assets/internettax.png" alt="Internet Tax">
+                <img src="assets/internettax.png" style="width:100%;" alt="Internet Tax">
             </div>
             <div class="mySlides">
-                <img src="assets/education.png" alt="Education">
+                <img src="assets/education.png" style="width:100%;" alt="Education">
             </div>
             <div class="mySlides">
-                <img src="assets/lines.jpg" alt="Lines">
+                <img src="assets/lines.jpg" style="width:100%;" alt="Lines">
             </div>
             <div style="text-align:center;">
-                <button onclick="prevSlide()">Previous</button>
-                <button onclick="nextSlide()">Next</button>
+                <img src="assets/1.png" style="height:20px;" onclick="prevSlide()"></img>
+                <img src="assets/1.png" style="height:20px;" onclick="prevSlide()"></img>
+                <img src="assets/1.png" style="height:20px;" onclick="prevSlide()"></img>
             </div>
         </div>
     </section>
