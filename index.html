@@ -14,14 +14,10 @@
 
         header,section {
             display: flex;
-            align-items: center;
             justify-content: space-between;
             padding: 20px;
             color: black;
         }
-	    #news{
-		    align-items:baseline;
-	    }
 
         nav {
             margin-bottom: 20px;
@@ -207,7 +203,7 @@
 
 <body onload="init();">
     <div style="margin-top:20px;"></div>
-    <header>
+    <header style="align-items: center;">
       <div class="text-half">
             <h1 style="margin-left:10%;">Hi, I'm Serena</h1>
               
@@ -229,7 +225,7 @@
         </div>
     </header>
 
-    <section id="opinions">
+    <section id="opinions" style="align-items: center;">
         <div style="width:60%;">
                 <div class="gallery">
         <div class="gallery-item">
@@ -301,7 +297,7 @@
         </div>
     </section>
 	<section id="news">
-		<div style="width:50%;position:sticky;top:0;bottom:50;align-items:baseline;">
+		<div style="width:50%;position:sticky;top:0;bottom:50;">
 			<br>
 			<h1 style="text-align:left;">News</h1><br>
               		  <h3 style="width:60%;">From quick coverage to in-depth news, I strive for timely, accurate stories that help inform my readers.</h3>
@@ -319,7 +315,7 @@
 		</div>
 	</section>
 
-    <section id="arts"></section>
+    <section id="arts" style="align-items: center;"></section>
 </body>
 
 </html>
