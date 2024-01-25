@@ -147,55 +147,6 @@
         .overlay-content h3 {
             margin: 5px; /* Adjusted margin for the title */
         }
-
-
-
-  $finalHeight: 250px;
-$finalWidth: 3 * $finalHeight;
-$scrollBarHeight: 1px;
-
-::-webkit-scrollbar {
-  width: $scrollBarHeight;
-  height: $scrollBarHeight;
-}
-
-::-webkit-scrollbar-button {
-  width: $scrollBarHeight;
-  height: $scrollBarHeight;
-}
-
-.horizontal-scroll-wrapper {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: calc(#{$finalHeight} + #{$scrollBarHeight});
-  max-height: $finalWidth;
-  margin: 0;
-  padding-top: $scrollBarHeight;
-  background: #abc;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transform: rotate(-90deg) translateY(-$finalHeight);
-  transform-origin: right top;
-  & > div {
-    display: block;
-    padding: 5px;
-    background: #cab;
-    transform: rotate(90deg);
-    transform-origin: right top;
-  }
-}
-
-.squares {
-  padding: $finalHeight 0 0 0;
-  & > div {
-    width: $finalHeight;
-    height: $finalHeight;
-    margin: 10px 0;
-  }
-}
-
     </style>
 </head>
 
@@ -296,16 +247,6 @@ $scrollBarHeight: 1px;
     </section>
 
     <section id="news">
-       <div class="horizontal-scroll-wrapper squares">
-          <div>item 1</div>
-          <div>item 2</div>
-          <div>item 3</div>
-          <div>item 4</div>
-          <div>item 5</div>
-          <div>item 6</div>
-          <div>item 7</div>
-          <div>item 8</div>
-        </div>
     </section>
 
     <section id="arts">
