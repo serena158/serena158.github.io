@@ -269,7 +269,7 @@
                             const slideInAt = window.scrollY + window.innerHeight;
                             const itemBottom = item.offsetTop + item.clientHeight;
 
-                            const isHalfShown = slideInAt > (itemBottom + 20);
+                            const isHalfShown = slideInAt > (itemBottom);
 
                             if (isHalfShown) {
                                 item.style.opacity = "1";
