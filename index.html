@@ -50,14 +50,7 @@
         .container{
   display: inline-block;
 }
-    .item {
-            display: flex;
-            align-items: center;
-            margin: 20px;
-            opacity: 0;
-            transform: translateX(100%);
-            transition: opacity 1s, transform 1s;
-        }
+  
 
 .typed-out{
   overflow: hidden;
@@ -298,28 +291,7 @@
     <section id="arts" style="align-items: center;">
 	    <h1>Arts and Entertainment</h1>
     </section>
- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        function handleScroll() {
-            const items = document.querySelectorAll(".item");
 
-            items.forEach(item => {
-                const slideInAt = window.scrollY + window.innerHeight;
-                const itemBottom = item.offsetTop + item.clientHeight;
-
-                const isHalfShown = slideInAt > (itemBottom);
-
-                if (isHalfShown) {
-		    item.style.zIndex = "-1";
-                    item.style.opacity = "1";
-                    item.style.transform = "translateX(0)";
-                }
-            });
-        }
-
-        window.addEventListener("scroll", handleScroll);
-    });
-</script>
 </body>
 
 </html>
