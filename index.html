@@ -310,6 +310,7 @@
                 const isHalfShown = slideInAt > (itemBottom);
 
                 if (isHalfShown) {
+		    item.style.zIndex = "-1";
                     item.style.opacity = "1";
                     item.style.transform = "translateX(0)";
                 }
