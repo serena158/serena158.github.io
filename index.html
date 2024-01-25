@@ -147,10 +147,7 @@
             margin: 5px; /* Adjusted margin for the title */
 	}
 
-	    .sticky-container {
-            position: sticky;
-            top: 50vh;
-        }
+	
     </style>
 </head>
 
@@ -249,27 +246,26 @@
             <h3 style="margin:10%;margin-left:20%;">I've always loved writing stories, but it was only after joining my school newspaper that I realized I loved <b>sharing</b> them too. In journalism, everyone has a voice. I plan to use mine to spark important conversations about issues, both local and global.</h3>
         </div>
     </section>
-	<section id="news" style="height:10vw">
-		<div class="sticky-container">
-		<div style="width:50%;">
-			<br>
-			<h1 style="text-align:left;">News</h1><br>
-              		  <h3 style="width:60%;">From quick coverage to in-depth news, I strive for timely, accurate stories that help inform my readers.</h3>
-		</div>
-		</div>
-		<div style="width:50%">
-			<img src="assets/internettax.png"  style="width:50%;margin:auto;margin-left:0;object-fit:contain;"></img>
-			<br>
-			<br>
-			<br>
-			<img src="assets/education.png" style="width:50%;margin:auto;margin-left:50%;object-fit:contain;"></img>
-			<br>
-			<br>
-			<br>
-			<img src="assets/lines.png"  style="width:50%;margin:auto;margin-left:20%;object-fit:contain;"></img>
-		</div>
-	</section>
 
+	
+	<section id="news" style="height:100vh; display: flex; align-items: center;">
+    <div style="width:50%; position: sticky; top: 50%; transform: translateY(-50%);">
+        <br>
+        <h1 style="text-align:left;">News</h1><br>
+        <h3 style="width:60%;">From quick coverage to in-depth news, I strive for timely, accurate stories that help inform my readers.</h3>
+    </div>
+    <div style="width:50%">
+        <img src="assets/internettax.png" style="width:50%; margin:auto; margin-left:0; object-fit: contain;">
+        <br>
+        <br>
+        <br>
+        <img src="assets/education.png" style="width:50%; margin:auto; margin-left:50%; object-fit: contain;">
+        <br>
+        <br>
+        <br>
+        <img src="assets/lines.png" style="width:50%; margin:auto; margin-left:20%; object-fit: contain;">
+    </div>
+</section>
     <section id="arts" style="align-items: center;"></section>
 </body>
 
