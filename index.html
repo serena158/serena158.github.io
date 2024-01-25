@@ -148,22 +148,33 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
-        .mySlides {
-            opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    position: absolute;
-    margin: 0;
-    top: 0;
-    left: 0;
+        .parallax {
+            /* Set the background color and adjust properties */
+            background-color: black; /* Set your desired background color */
+            height: 100vh; /* Set the height of the parallax section */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff; /* Text color on top of the background */
+            font-size: 2em; /* Adjust text size */
         }
 
-        .mySlides.active {
-            opacity: 1;
+        .content {
+            /* Style for the content in the parallax section */
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
         }
-        #slideshow-container {
-    position: relative;
-            margin: 0;
-}
+
+        .image-scroll {
+            /* Style for the images that will scroll over the text */
+            width: 100%;
+            height: auto;
+            max-width: 800px; /* Adjust maximum width for your images */
+            position: absolute;
+            top: 50%; /* Adjust vertical position */
+            transform: translateY(-50%);
+        }
 
     </style>
 
@@ -297,29 +308,18 @@
     </section>
 
     <section id="news">
-        <div style="width: 30%;">
-            <div><h1 style="text-align:center;">News</h1><br>
+        <div class="parallax" style="width:100%;">
+    <div class="content"">
+           <div><h1 style="text-align:center;">News</h1><br>
             <h3 style="margin:10%;">From quick coverage to in-depth political stories, here are some of my favorite news pieces.</h3>
             <br>
-                 <div style="text-align:center;">
-                    <img src="assets/1.png" style="height:40px;" onclick="internettax()"></img>
-                    <img src="assets/1.png" style="height:40px;" onclick="education()"></img>
-                    <img src="assets/1.png" style="height:40px;" onclick="lines()"></img>
-                </div>
             </div>
-    
-        </div>
-        <div id="slideshow-container" style="width:60%; margin:0;">
-            <div class="mySlides">
-                <img src="assets/internettax.png" style="width:100%;" alt="Internet Tax">
-            </div>
-            <div class="mySlides">
-                <img src="assets/education.png" style="width:100%;" alt="Education">
-            </div>
-            <div class="mySlides">
-                <img src="assets/lines.jpg" style="width:100%;" alt="Lines">
-            </div>
-        </div>
+    </div>
+    <img class="image-scroll" src="assets/internettax.png" alt="Image 1">
+    <img class="image-scroll" src="assets/education.png" alt="Image 2">
+    <img class="image-scroll" src="assets/lines.jpg" alt="Image 3">
+    </div>
+        
     </section>
 
     <section id="arts">
