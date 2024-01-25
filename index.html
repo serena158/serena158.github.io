@@ -148,39 +148,28 @@
             margin: 5px; /* Adjusted margin for the title */
         }
 
+        .content {
+    /* Style for the content in the parallax section */
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
+    position: fixed; /* Change from relative to fixed */
+    width: 30%; /* Set an appropriate width */
+    z-index: 1; /* Add this line to place it above the images */
+}
+
+.image-scroll {
+    /* Style for the images that will scroll over the text */
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* Adjust maximum width for your images */
+    position: absolute; /* Change from relative to absolute */
+    top: 50%; /* Adjust vertical position */
+    left: 50%; /* Adjust horizontal position */
+    transform: translate(-50%, -50%); /* Center the images */
+    z-index: 0; /* Add this line to place it behind the text */
+}
     </style>
-
-    <script>
-        let slideIndex = 0;
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
-            }
-            slides[slideIndex].classList.add("active");
-        }
-
-        function internettax() {
-            slideIndex = 0;
-            showSlides();
-        }
-
-        function education() {
-            slideIndex=1;
-            showSlides();
-        }
-
-        function lines() {
-            slideIndex=2;
-            showSlides();
-        }
-
-        // Initialize the slideshow
-        function init() {
-            showSlides();
-        }
-    </script>
 </head>
 
 <body onload="init();">
@@ -281,7 +270,7 @@
 
     <section id="news">
         <div style="width:100%;">
-                    <div class="content" style="width:30%;position:fixed;">
+                    <div class="content" style="width:30%;">
                        <div><h1 style="text-align:center;">News</h1><br>
                         <h3 style="margin:10%;">From quick coverage to in-depth political stories, here are some of my favorite news pieces.</h3>
                         <br>
