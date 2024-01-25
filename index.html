@@ -170,19 +170,18 @@
             slides[slideIndex].classList.add("active");
         }
 
-        function nextSlide() {
-            slideIndex++;
-            if (slideIndex >= document.getElementsByClassName("mySlides").length) {
-                slideIndex = 0;
-            }
+        function internettax() {
+            slideIndex = 0;
             showSlides();
         }
 
-        function prevSlide() {
-            slideIndex--;
-            if (slideIndex < 0) {
-                slideIndex = document.getElementsByClassName("mySlides").length - 1;
-            }
+        function education() {
+            slideIndex=1;
+            showSlides();
+        }
+
+        function lines() {
+            slideIndex=2;
             showSlides();
         }
 
@@ -302,9 +301,9 @@
                 <img src="assets/lines.jpg" style="width:100%;" alt="Lines">
             </div>
             <div style="text-align:center;">
-                <img src="assets/1.png" style="height:20px;" onclick="prevSlide()"></img>
-                <img src="assets/1.png" style="height:20px;" onclick="prevSlide()"></img>
-                <img src="assets/1.png" style="height:20px;" onclick="prevSlide()"></img>
+                <img src="assets/1.png" style="height:40px;" onclick="internextax()"></img>
+                <img src="assets/1.png" style="height:40px;" onclick="education()"></img>
+                <img src="assets/1.png" style="height:40px;" onclick="lines()"></img>
             </div>
         </div>
     </section>
