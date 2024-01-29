@@ -166,6 +166,8 @@ transition: opacity 0.8s ease-in-out;
 
         .mySlides {
             display: none;
+		opacity: 0;
+    transition: opacity 1s ease-in-out;
         }
 
         /* Navigation dots */
@@ -303,6 +305,12 @@ transition: opacity 0.8s ease-in-out;
             background-color: #788797;
             color: #ffffff;
         }
+
+	
+
+.fade-in {
+    opacity: 1;
+}
     </style>
 </head>
 
@@ -588,6 +596,13 @@ transition: opacity 0.8s ease-in-out;
                 dots[i].className = dots[i].className.replace(" active", "");
             }
 
+	    for (i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("fade-in");  // Remove class from all slides
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].classList.add("fade-in"); 
+		
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
