@@ -166,8 +166,6 @@ transition: opacity 0.8s ease-in-out;
 
         .mySlides {
             display: none;
-		opacity: 0;
-    transition: opacity 1s ease-in-out;
         }
 
         /* Navigation dots */
@@ -305,12 +303,18 @@ transition: opacity 0.8s ease-in-out;
             background-color: #788797;
             color: #ffffff;
         }
+.boing {
+  animation-name: boing;
+  animation-duration: 1.5s;
+}
 
+@keyframes boing {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 	
 
-.fade-inslide {
-    opacity: 1;
-}
+
     </style>
 </head>
 
@@ -488,7 +492,7 @@ transition: opacity 0.8s ease-in-out;
 
     <section id="other" style="align-items: center;">
           <div class="slideshow-container fade" style="width:50%">
-        <div class="mySlides">
+        <div class="mySlides boing">
              <a href="https://www.yumpu.com/en/document/read/67536266/west-newsmagazine-2-22-23/44" target="_blank">
                     <div class="gallery-item2" style="height:100%;width:100%;overflow:hidden;object-fit:contain;">
                         <img src="assets/bagels.png" style="height:100%;overflow:hidden;object-fit:contain;" />
@@ -501,7 +505,7 @@ transition: opacity 0.8s ease-in-out;
                 </a>
 	</div>
 
-	<div class="mySlides">
+	<div class="mySlides boing">
              <a href="https://pwestpathfinder.com/2022/04/06/why-turning-red-is-turning-heads/" target="_blank">
                     <div class="gallery-item2" style="height:100%;width:100%;overflow:hidden;object-fit:contain;">
                         <img src="assets/panda.png" style="height:100%;overflow:hidden;object-fit:contain;" />
@@ -515,7 +519,7 @@ transition: opacity 0.8s ease-in-out;
 	</div>
 
 
-	<div class="mySlides">
+	<div class="mySlides boing">
              <a href="https://pwestpathfinder.com/2022/12/06/dropping-out/" target="_blank">
                     <div class="gallery-item2" style="height:100%;width:100%;overflow:hidden;object-fit:contain;">
                         <img src="assets/dropout.png" style="height:100%;overflow:hidden;object-fit:contain;" />
@@ -529,7 +533,7 @@ transition: opacity 0.8s ease-in-out;
 	</div>
 
 
-	<div class="mySlides">
+	<div class="mySlides boing">
              <a href="https://pwestpathfinder.com/2024/01/10/the-hunger-games-the-ballad-of-songbirds-and-snakes-is-a-thought-provoking-addition-to-the-popular-franchise/" target="_blank">
                     <div class="gallery-item2" style="height:100%;width:100%;overflow:hidden;object-fit:contain;">
                         <img src="assets/hungergames.png" style="height:100%;overflow:hidden;object-fit:contain;" />
@@ -542,7 +546,7 @@ transition: opacity 0.8s ease-in-out;
                 </a>
 	</div>
 	
-	<div class="mySlides">
+	<div class="mySlides boing">
              <a href="https://pwestpathfinder.com/2023/05/29/longhorn-lookbook-neil-dhiman/" target="_blank">
                     <div class="gallery-item2" style="height:100%;width:100%;overflow:hidden;object-fit:contain;">
                         <img src="assets/fashion.png" style="height:100%;overflow:hidden;object-fit:contain;" />
@@ -595,14 +599,6 @@ transition: opacity 0.8s ease-in-out;
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-
-	    for (i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("fade-inslide");  // Remove class from all slides
-        slides[i].style.display = "none";
-    }
-
-    slides[slideIndex - 1].classList.add("fade-inslide"); 
-		
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
         }
