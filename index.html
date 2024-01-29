@@ -308,7 +308,7 @@ transition: opacity 0.8s ease-in-out;
 
 	
 
-.fade-in {
+.fade-inslide {
     opacity: 1;
 }
     </style>
@@ -597,11 +597,11 @@ transition: opacity 0.8s ease-in-out;
             }
 
 	    for (i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("fade-in");  // Remove class from all slides
+        slides[i].classList.remove("fade-inslide");  // Remove class from all slides
         slides[i].style.display = "none";
     }
 
-    slides[slideIndex - 1].classList.add("fade-in"); 
+    slides[slideIndex - 1].classList.add("fade-inslide"); 
 		
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
