@@ -201,7 +201,7 @@ transition: opacity 0.8s ease-in-out;
             opacity: 50%;		
         }
 
-        .active {
+        .activedot {
               animation: fadeIn 1s forwards; /* Add fade-in animation */
 }
 
@@ -631,10 +631,10 @@ transition: opacity 0.8s ease-in-out;
             }
 
             for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+                dots[i].className = dots[i].className.replace(" activedot", "");
             }
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+            dots[slideIndex - 1].className += " activedot";
         }
     </script>
 
