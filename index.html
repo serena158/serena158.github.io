@@ -204,6 +204,19 @@ transition: opacity 0.8s ease-in-out;
         .activedot {
               animation: fadeIn 1s forwards; /* Add fade-in animation */
 }
+	    .dot1 {
+            height: 60px;
+            width: 60px;
+	    margin:5px;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            cursor: pointer;
+            opacity: 50%;		
+        }
+
+        .activedot1 {
+              animation: fadeIn 1s forwards; /* Add fade-in animation */
+}
 
 @keyframes fadeIn {
     from {
@@ -617,7 +630,8 @@ transition: opacity 0.8s ease-in-out;
             let i;
             const slides = document.getElementsByClassName("mySlides");
             const dots = document.getElementsByClassName("dot");
-
+	    const dots1 = document.getElementsByClassName("dot1");
+		
             if (n > slides.length) {
                 slideIndex = 1;
             }
@@ -633,10 +647,16 @@ transition: opacity 0.8s ease-in-out;
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" activedot", "");
             }
+	    for (i = 0; i < dots1.length; i++) {
+                dots1[i].className = dots1[i].className.replace(" activedot1", "");
+            }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " activedot";
+	dots1[slideIndex - 1].className += " activedot1";
         }
     </script>
+
+	    
 
         <!-- Navigation dots -->
 
@@ -644,11 +664,11 @@ transition: opacity 0.8s ease-in-out;
 	<div style="width:50%;" class="bigscreen"><h1 style="text-align:center;">Other</h1><br> 
 		<h3 style="margin:10%;margin-left:20%;">Journalism, at its heart, is about storytelling. While writing opinions helps me give voice to my story, writing features and reviews has allowed me to share other people's stories as well. I really enjoy feature writing in particular &#8212; being able to capture a moment in someone's life through an article.</h3>
 		<div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"><img style="width:100%;" src="assets/icons/5.png"></span>
-            <span class="dot" onclick="currentSlide(2)"><img style="width:100%;" src="assets/icons/1.png"></span>
-            <span class="dot" onclick="currentSlide(3)"><img style="width:100%;" src="assets/icons/4.png"></span>
-	    <span class="dot" onclick="currentSlide(4)"><img style="width:100%;" src="assets/icons/2.png"></span>
-            <span class="dot" onclick="currentSlide(5)"><img style="width:100%;" src="assets/icons/3.png"></span>
+            <span class="dot1" onclick="currentSlide(1)"><img style="width:100%;" src="assets/icons/5.png"></span>
+            <span class="dot1" onclick="currentSlide(2)"><img style="width:100%;" src="assets/icons/1.png"></span>
+            <span class="dot1" onclick="currentSlide(3)"><img style="width:100%;" src="assets/icons/4.png"></span>
+	    <span class="dot1" onclick="currentSlide(4)"><img style="width:100%;" src="assets/icons/2.png"></span>
+            <span class="dot1" onclick="currentSlide(5)"><img style="width:100%;" src="assets/icons/3.png"></span>
 		</div>
 	</div></div>
     </section>
