@@ -10,10 +10,33 @@
             font-family: Courier New, sans-serif;
             margin: 20px;
             overflow-wrap: break-word;
+            
         }
-        
+         @media only screen and (max-width: 700px) {
+             .text-half {
+            width: 100%;
+            margin-top: 10vw;
+            position: relative; /* Added position relative for absolute positioning of the gap div */
+        }
+
+        .aboutme-container {
+            width: 100%;
+        }
+         }
+         @media only screen and (min-width: 700px) {
+            header, section{display;flex;}
+             .text-half {
+            width: 50%;
+            margin-top: 10vw;
+            position: relative; /* Added position relative for absolute positioning of the gap div */
+        }
+
+        .aboutme-container {
+            width: 50%;
+        }
+             
+         }
         header, section {
-            display: flex;
             justify-content: space-between;
             padding: 20px;
             color: black;
@@ -31,16 +54,6 @@
             padding-bottom: 5px;
             size: 100px;
             font-family: Georgia;
-        }
-
-        .text-half {
-            width: 50%;
-            margin-top: 10vw;
-            position: relative; /* Added position relative for absolute positioning of the gap div */
-        }
-
-        .aboutme-container {
-            width: 50%;
         }
 
         /* Style for the navigation bar links */
