@@ -21,10 +21,10 @@
 			  font-size: 3vw;
 			  width: 0;
 			}
-			.gcontainer{width:100%;} .bigscreen{display:none;}
+			.gcontainer{width:100%;} .bigscreen{display:none;} .imagecontainerresponsive{width:100%;}
 	 }
 	@media only screen and (min-width: 700px) {
-		.text-half{ margin-bottom:2vw;}
+		.text-half{ margin-bottom:2vw;}.imagecontainerresponsive{width:50%;}
 		.typed-out{
   overflow: hidden;
   border-right: 0.3rem solid black;
@@ -433,13 +433,17 @@ transition: opacity 0.8s ease-in-out;
     </section>
 	
 <section id="news" style="height:176.66vmin; display: flex; position: relative;align-items: start;">
-        <div style="width:50%; position: sticky; top: 50%; margin-left:10%; transform: translateY(-50%);margin-top:10%;">
+        <div style="width:50%; position: sticky; top: 50%; margin-left:10%; transform: translateY(-50%);margin-top:10%;" class="bigscreen">
             <br>
 	<h1 style="text-align:left;">News</h1><br>
             <h3 style="width:40%;">From quick coverage to in-depth news, I strive for timely, accurate stories that help inform my readers.</h3>
         </div>
+	<div style="width:100%;" class="littlescreen">
+		<h1 style="text-align:left;">News</h1><br>
+            <h3 style="width:50%;">From quick coverage to in-depth news, I strive for timely, accurate stories that help inform my readers.</h3>
+	</div>
 	<div class="container appear3">
-        <div style="width:50%; position: absolute; top: 0; right: 0;">
+        <div style="position: absolute; top: 0; right: 0;" class="imagecontainerresponsive">
             <div style="height:32.33vmin; width:32.33vmin; margin:auto; margin-left:0; margin-bottom: 1vmin;">
                 <a href="https://www.westnewsmagazine.com/news/internet-use-tax-chesterfield-town-country-voters-asked-to-decide/article_e9c52548-c8ee-11ed-acba-4f52c272fda0.html" target="_blank">
                     <div class="gallery-item" style="height:100%;width:100%;overflow:hidden;object-fit:contain;">
