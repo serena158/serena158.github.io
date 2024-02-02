@@ -11,10 +11,7 @@
             overflow-wrap: break-word;
         }
 	 @media only screen and (max-width: 700px) {
-		 .body{
-			 width:100% !important;
-			 margin:auto !important;
-		 }
+		 
 		 .typed-out{
   overflow: hidden;
   border-right: 0.3rem solid black;
@@ -24,6 +21,7 @@
   font-size: 3vw;
   width: 0;
 }
+		 .gcontainer{width:100%;} .bigscreen{display:none;} .littlescreen{display:block;)
 	 }
 	@media only screen and (min-width: 700px) {
 		.typed-out{
@@ -34,6 +32,7 @@
   typing 2s steps(20, end) forwards, blink-caret 1s step-end infinite;
   font-size: 2vw;
   width: 0;
+			.gcontainer{width:60%;} .bigscreen{display:block;} .littlescreen{display:none;)
 }
 		     header,section {
             display: flex;}
@@ -362,7 +361,10 @@ transition: opacity 0.8s ease-in-out;
     </header>
 
     <section id="opinions" style="align-items: center;">
-        <div style="width:60%;">
+	    <div style="width:100%;"><h1 class="littlescreen" style="text-align:center;">Opinions</h1><br>
+            <h3 style="margin:10%;margin-left:20%;">I've always loved writing stories, but it was only after joining my school newspaper that I realized I loved <b>sharing</b> them too. In journalism, everyone has a voice. I plan to use mine to spark important conversations about issues, both local and global.</h3>
+        </div>
+        <div class="gcontainer">
                 <div class="gallery fade">
         <div class="gallery-item">
             <a href="https://www.nytimes.com/2022/06/17/learning/stolen-art-why-we-need-repatriation.html" target="_blank">
@@ -426,7 +428,7 @@ transition: opacity 0.8s ease-in-out;
         </div>
     </div>
         </div>
-        <div style="width:30%;"><h1 style="text-align:center;">Opinions</h1><br>
+        <div style="width:30%;"><h1 class="bigscreen" style="text-align:center;">Opinions</h1><br>
             <h3 style="margin:10%;margin-left:20%;">I've always loved writing stories, but it was only after joining my school newspaper that I realized I loved <b>sharing</b> them too. In journalism, everyone has a voice. I plan to use mine to spark important conversations about issues, both local and global.</h3>
         </div>
     </section>
