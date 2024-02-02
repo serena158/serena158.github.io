@@ -10,9 +10,31 @@
             font-family: Courier New, sans-serif;
             overflow-wrap: break-word;
         }
-
+	 @media only screen and (max-width: 700px) {
+		 .typed-out{
+  overflow: hidden;
+  border-right: 0.3rem solid black;
+  white-space: nowrap;
+  animation: 
+  typing 2s steps(20, end) forwards, blink-caret 1s step-end infinite;
+  font-size: 3vw;
+  width: 0;
+}
+	 }
+	@media only screen and (min-width: 700px) {
+		.typed-out{
+  overflow: hidden;
+  border-right: 0.3rem solid black;
+  white-space: nowrap;
+  animation: 
+  typing 2s steps(20, end) forwards, blink-caret 1s step-end infinite;
+  font-size: 2vw;
+  width: 0;
+}
+		     header,section {
+            display: flex;}
+	}
         header,section {
-            display: flex;
             justify-content: space-between;
             padding: 20px;
 	    margin: 20px;
@@ -65,15 +87,7 @@ transition: opacity 0.8s ease-in-out;
   -webkit-transform: none;
           transform: none;
 }
-.typed-out{
-  overflow: hidden;
-  border-right: 0.3rem solid black;
-  white-space: nowrap;
-  animation: 
-  typing 2s steps(20, end) forwards, blink-caret 1s step-end infinite;
-  font-size: 2vw;
-  width: 0;
-}
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -319,6 +333,7 @@ transition: opacity 0.8s ease-in-out;
 </head>
 
 <body onload="init();">
+
     <div style="margin-top:20px;"></div>
     <header style="align-items: center;">
       <div class="text-half">
